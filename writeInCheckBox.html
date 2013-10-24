@@ -2,8 +2,9 @@
 <html>
 	<script src="formValidation.js" type="text/javascript"></script>
 	<body>
-		<form action="thankYou.html" onsubmit="return validateCheckableForm()">
-			<input type="checkbox" name="votingOption" value="Person_One">Person One<br>
+		<form action="thankYou.html" onsubmit="return validateCheckAndWriteInForm()">
+			<input type="checkbox" name="votingOption" id="writeIn1"><input type="text" name="blah" id="writeIn1Text"><br>
+			<input type="checkbox" name="votingOption" id="writeIn2"><input type="text" id="writeIn2Text"><br>
 			<input type="checkbox" name="votingOption" value="Person_One">Person One<br>
 			<input type="checkbox" name="votingOption" value="Person_Two">Person Two<br>
 			<input type="checkbox" name="votingOption" value="Person_Three">Person Three<br>
