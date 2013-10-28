@@ -1,0 +1,40 @@
+
+<head>
+	<script>
+		function addNew()
+		{
+			var form = document.getElementById('radioSet');
+			var newButton = document.createElement('div');
+			newButton.innerHTML = '<input type=\"radio\"/> Name1: <input type=\"text\"/> <br> Name2: <input type=\"text\"/>';
+		
+			form.appendChild(newButton);
+			
+			
+		}
+	</script>
+</head>
+
+<body>
+	<form>
+		Homecoming <input type="text" name="date" placeholder="Date"/>
+	</form>
+	
+	<br/>
+	<br/>
+	<p>Enter the names of the candidate pairs</p>
+	<br/>
+	<p>Use Add new Candidate button to create a new pair</p>
+	
+	<form id="radioSet">
+		<div>		
+		<input type="radio"/>
+		Name1: <input  type="text" /> <br>
+		Name2: <input type="text" />
+		</div>
+	</form>
+	<br>	
+	<form>
+		<input type="submit" name="Submit" value="Submit"/>
+	</form>
+	<button onClick="addNew()">Add a new Candidate</button>
+</body>

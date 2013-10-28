@@ -1,0 +1,37 @@
+
+<head>
+	<script>
+		function addNew()
+		{
+			var form = document.getElementById('checkSet');
+			var newButton = document.createElement('div');
+			newButton.innerHTML = '<input type=\"checkbox\"/> Name: <input type=\"text\"/>';
+		
+			form.appendChild(newButton);
+			
+			
+		}
+	</script>
+</head>
+
+<body>
+	<h2>SGA Ballot</h2>
+	
+	<br/>
+	<br/>
+	<p>Enter the names of the known candidates</p>
+	<br>
+	<p>use Add new Candidate to create a new candidate entry</p>
+	
+	<form id="checkSet">
+		<div>		
+		<input type="checkbox"/>
+		Name: <input type="text" />
+		</div>
+	</form>
+	<br>	
+	<form>
+		<input type="submit" name="Submit" value="Submit"/>
+	</form>
+	<button onClick="addNew()">Add a new Candidate</button>
+</body>
