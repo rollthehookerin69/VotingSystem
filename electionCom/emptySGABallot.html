@@ -1,14 +1,24 @@
 
 <head>
 	<script>
+		var counter = 0;
 		function addNew()
 		{
 			var form = document.getElementById('checkSet');
 			var newButton = document.createElement('div');
 			newButton.innerHTML = '<input type=\"checkbox\"/> Name: <input type=\"text\"/>';
-		
+			counter = counter +1;
+			newButton.setAttribute("id",counter);
 			form.appendChild(newButton);
 			
+			
+		}
+		function removeDivision()
+		{
+			var div = document.getElementById(String(counter));
+			div.parentNode.removeChild(div);
+			
+			counter = counter -1;
 			
 		}
 	</script>
@@ -34,4 +44,5 @@
 		<input type="submit" name="Submit" value="Submit"/>
 	</form>
 	<button onClick="addNew()">Add a new Candidate</button>
+	<button onClick="removeDivision()">Remove Last Candidate</button>
 </body>

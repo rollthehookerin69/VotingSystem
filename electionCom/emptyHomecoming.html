@@ -1,14 +1,24 @@
 
 <head>
 	<script>
+		var counter = 0;
 		function addNew()
 		{
 			var form = document.getElementById('radioSet');
 			var newButton = document.createElement('div');
-			newButton.innerHTML = '<input type=\"radio\"/> Name1: <input type=\"text\"/> <br> Name2: <input type=\"text\"/>';
-		
+			counter = counter+1;
+			newButton.innerHTML = '<input type=\"radio\"/> Name1: <input type=\"text\"/> Name2: <input type=\"text\"/>';
+			newButton.setAttribute("id",String(counter));
 			form.appendChild(newButton);
 			
+			
+		}
+		function removeDivision()
+		{
+			var div = document.getElementById(String(counter));
+			div.parentNode.removeChild(div);
+			
+			counter = counter -1;
 			
 		}
 	</script>
@@ -22,13 +32,12 @@
 	<br/>
 	<br/>
 	<p>Enter the names of the candidate pairs</p>
-	<br/>
 	<p>Use Add new Candidate button to create a new pair</p>
 	
 	<form id="radioSet">
 		<div>		
 		<input type="radio"/>
-		Name1: <input  type="text" /> <br>
+		Name1: <input  type="text" /> 
 		Name2: <input type="text" />
 		</div>
 	</form>
@@ -37,4 +46,5 @@
 		<input type="submit" name="Submit" value="Submit"/>
 	</form>
 	<button onClick="addNew()">Add a new Candidate</button>
+	<button onClick="removeDivision()">Remove Last Candidate</button>
 </body>
