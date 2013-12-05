@@ -1,0 +1,78 @@
+<html>
+	<body>
+		<h1>Election Creation</h1>
+		<div>
+			<form>
+				Election Name: <input type="text" id="name" name="electionName"><br/>
+			</form>
+		</div>
+		<div>
+			<h3>Select Type of Vote</h3>
+				<form>
+    				<input type="radio" name="vote type" value="choice 1" /> Write In <br />
+   					<input type="radio" name="vote type" value="choice 2" /> Check Box <br />
+    				<input type="radio" name="vote type" value="choice 3" /> Radio Button <br />
+    				<input type="radio" name="vote type" value="choice 4" /> Other <br />
+    			</form>
+		</div>
+		<div>
+			<h3>Select Election Commissioner</h3>
+			Name:
+			<select>   
+			<optgroup label="Freshmen">
+			    <option value="student1">Sam Abbot</option>
+			    <option value="student2">Ben Baker</option>
+			    <option value="student3">Jeremy Connor</option>
+			    <option value="student4">Jessica Dean</option>
+			</optgroup>
+			<optgroup label="Sophomores">
+			    <option value="student5">Hershel Greene</option>
+			    <option value="student6">Maria Hart</option>
+			    <option value="student7">Rachel MacDonald</option>
+			    <option value="student8">Jack Parker</option>
+			</optgroup>
+			<optgroup label="Juniors">
+			    <option value="student9">Courtney Smith</option>
+			    <option value="student10">Ashley Turner</option>
+			    <option value="student11">Anthony Wagner</option>
+			    <option value="student12">Claire Watson</option>
+			</optgroup>
+			<optgroup label="Seniors">
+			    <option value="student13">Duane Anderson</option>
+			    <option value="student14">Ginny Fontaine</option>
+			    <option value="student15">Betty Howe</option>
+			    <option value="student16">Rebecca Squire</option>
+			</optgroup>
+			</select>
+		</div>
+		<div>
+			<h3>Election Open and Close Dates</h3>
+			<table border="1">
+			    <tr>
+					<th></th>
+					<th>Date Opens</th>
+					<th>Date Closes</th>
+		    	</tr>
+		   	    <tr>
+					<td>Election</td>
+					<td>
+					<form action="demo_form.asp">
+						<input type="date" name="open">
+					</form>
+					</td>
+					<td>
+					<form action="demo_form.asp">
+						<input type="date" name="close">
+					</form>
+					</td>
+			    </tr>
+			</table>
+		</div>
+		<br/>
+		<div>
+			<form action="electionCreatedSuccessfully.html">
+				<input type="submit" value="Create Election"/><br/>
+			</form>
+		</div>
+	</body>
+</html>
