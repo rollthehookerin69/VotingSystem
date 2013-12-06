@@ -1,0 +1,59 @@
+<head>
+</head>
+<body>
+<h3>Votes received as of  
+<script type="text/javascript">
+
+var currentTime = new Date()
+var month = currentTime.getMonth() + 1
+var day = currentTime.getDate()
+var year = currentTime.getFullYear()
+
+document.write(month + "/" + day + "/" + year+" ")
+
+var hours = currentTime.getHours()
+var minutes = currentTime.getMinutes()
+if (minutes < 10){
+minutes = "0" + minutes
+}
+document.write(hours + ":" + minutes + " ")
+if(hours > 11){
+document.write("PM")
+} else {
+document.write("AM")
+}
+
+</script></h3>
+
+<table border="1">
+<tr>
+<th>StudentID</th><th>Vote Made</th>
+</tr>
+<tr>
+	<td bgcolor="red">5678</td><td>#1</td><td><button>discard Vote</button></td>
+</tr>
+<tr>
+	<td bgcolor="red">5678</td><td>#1</td><td><button>discard Vote</button></td>
+</tr>
+<tr>
+	<td>5648</td><td>#4</td><td><button>discard Vote</button></td>
+</tr>
+<tr>
+	<td>1378</td><td>#4</td><td><button>discard Vote</button></td>
+</tr>
+<tr>
+	<td bgcolor="red">5678</td><td>#1</td><td><button>discard Vote</button></td>
+</tr>
+<tr>
+	<td>1678</td><td>#2</td><td><button>discard Vote</button></td>
+</tr>
+<tr>
+	<td bgcolor="red">5678</td><td>#1</td><td><button>discard Vote</button></td>
+</tr>
+<tr>
+	<td>4784</td><td>#3</td><td><button>discard Vote</button></td>
+</tr>
+
+</table>
+<button>Quick Discard all Duplicates</button>
+</body>
