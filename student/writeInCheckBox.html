@@ -1,16 +1,35 @@
 <!-- This still needs writeins added-->
+<head>
+<script>
+	function addNew()
+		{
+			var form = document.getElementById('stuff');
+			var newButton = document.createElement('div');
+			newButton.innerHTML = '<input type=\"checkbox\"><input type=\"text\">';
+			form.appendChild(newButton);
+			
+			
+		}
+</script>
+</head>
 <html>
 	<script src="formValidation.js" type="text/javascript"></script>
 	<body>
 		<h1 style="text-align: center;">Student Government Election</h1>
-		<form action="thankYou.html" onsubmit="return validateCheckAndWriteInForm()">
+		<p>Use this form to vote for the Student Government Election, if you want to select a write-in candidate write-in th name and select that name</p>
+		<p>If you require more than two write-in spaces</p>
+		<form action="thankYou.html" onsubmit="return validateCheckAndWriteInForm()" id="stuff">
 			<input type="checkbox" name="votingOption" id="writeIn1"><input type="text" name="blah" id="writeIn1Text"><br>
 			<input type="checkbox" name="votingOption" id="writeIn2"><input type="text" id="writeIn2Text"><br>
 			<input type="checkbox" name="votingOption" value="Floyd_Nash">Floyd Nash<br>
 			<input type="checkbox" name="votingOption" value="Dorothy_Garrett">Dorothy Garrett<br>
 			<input type="checkbox" name="votingOption" value="James_Johnson">James Johnson<br>
 			<input type="checkbox" name="votingOption" value="Linda_Smith">Linda Smith<br>
+			
+		</form>
+		<form>
 			<input type="submit" value="Submit">
 		</form>
+		<button onclick="addNew()">Add another Write-in</button>
 	</body>
 </html>
